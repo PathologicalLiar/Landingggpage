@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Vibrant Landing</title>
+	<style>
+		:root{
+			--bg1: #ff5f6d; /* coral */
+			--bg2: #ffc371; /* gold */
+			--accent1: #7b61ff; /* violet */
+			--accent2: #00d4ff; /* cyan */
+			--card: rgba(255,255,255,0.12);
+			--glass: rgba(255,255,255,0.08);
+			--text: #ffffff;
+			--muted: rgba(255,255,255,0.85);
+		}
+		*{box-sizing:border-box}
+		body{
+			margin:0;
+			font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+			color:var(--text);
+			background:linear-gradient(135deg,var(--bg1),var(--bg2));
+			min-height:100vh;
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			padding:48px 24px;
+		}
+		.container{
+			width:100%;
+			max-width:1200px;
+			background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+			border-radius:20px;
+			padding:40px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.02);
+			backdrop-filter: blur(8px);
+		}
+		header{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			gap:16px;
+		}
+		.brand{
+			display:flex;align-items:center;gap:12px;
+		}
+		.logo{
+			width:52px;height:52px;border-radius:12px;
+			background:linear-gradient(135deg,var(--accent1),var(--accent2));
+			box-shadow: 0 6px 18px rgba(123,97,255,0.28);
+			display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;
+		}
+		nav a{color:var(--text);text-decoration:none;margin-left:18px;font-weight:600;opacity:0.95}
+		.hero{
+			display:grid;
+			grid-template-columns:1fr 420px;
+			gap:28px;
+			align-items:center;
+			margin-top:28px;
+		}
+		.hero-left h1{
+			font-size:48px;margin:0 0 14px;line-height:1.03;letter-spacing:-0.5px;
+			background:linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.9) 100%);
+			-webkit-background-clip:text;background-clip:text;color:transparent;
+		}
+		.hero-left p{color:var(--muted);font-size:18px;margin:0 0 22px}
+		.cta-row{display:flex;gap:12px}
+		.btn{padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:700}
+		.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#061226;box-shadow:0 8px 20px rgba(123,97,255,0.18)}
+		.secondary{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--text)}
+		/* card on right */
+		.card{
+			background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+			border-radius:18px;padding:20px;box-shadow:0 8px 30px rgba(0,0,0,0.25);
+		}
+		.promo-graphic{height:280px;border-radius:12px;background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 50%,#a18cd1 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#061226;font-weight:800}
+		.dots{display:flex;gap:8px;margin-top:14px}
+		.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.6)}
+		/* features */
+		.features{display:flex;gap:18px;margin-top:26px}
+		.feature{flex:1;background:var(--card);padding:16px;border-radius:12px}
+		.feature h4{margin:0 0 6px}
+		.feature p{margin:0;color:var(--muted);font-size:14px}
+		footer{margin-top:28px;display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:13px}
+		/* responsive */
+		@media (max-width:880px){
+			.hero{grid-template-columns:1fr;}
+			.promo-graphic{height:220px}
+			.hero-left h1{font-size:36px}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="brand">
+				<div class="logo">V</div>
+				<div>
+					<div style="font-weight:800">Vivid</div>
+					<div style="font-size:12px;color:var(--muted);margin-top:2px">Colourful landing UI</div>
+				</div>
+			</div>
+			<nav>
+				<a href="#features">Features</a>
+				<a href="#pricing">Pricing</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div class="hero-left">
+				<h1>Make your ideas pop with colour</h1>
+				<p>Discover vibrant components and joyful interactions crafted to delight users and boost conversions. Lightweight, responsive, and ready to customize.</p>
+				<div class="cta-row">
+					<button class="btn primary">Get Started</button>
+					<button class="btn secondary">Live Demo</button>
+				</div>
+				<div class="features" id="features">
+					<div class="feature">
+						<h4>Bright themes</h4>
+						<p>Multiple pre-built palettes to fit any mood.</p>
+					</div>
+					<div class="feature">
+						<h4>Fast & Responsive</h4>
+						<p>Optimized for performance on all devices.</p>
+					</div>
+					<div class="feature">
+						<h4>Easy to customize</h4>
+						<p>Simple variables let you tweak colors and shapes.</p>
+					</div>
+				</div>
+			</div>
+
+			<aside class="card">
+				<div class="promo-graphic">
+					<div style="font-size:22px">Vivid Components</div>
+					<div style="font-size:12px;margin-top:6px">Beautiful by default</div>
+					<div class="dots" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+				</div>
+				<div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+					<div style="color:var(--muted)">Trusted by creators</div>
+					<div style="font-weight:800">12k+</div>
+				</div>
+			</aside>
+		</section>
+
+		<footer>
+			<div>© 2026 Vivid · Made with gradients</div>
+			<div>
+				<a href="#" style="color:var(--muted);text-decoration:none;margin-right:12px">Privacy</a>
+				<a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
